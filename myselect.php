@@ -17,22 +17,14 @@ else
     $res = $db->query("select * from cars where name='$name'");
 }
 
-/*
+$mygroup=array();
+
 while ($row = $res->fetchArray()) {
-echo "{$row['id']} {$row['name']} {$row['price']} \n";
+   array_push($mygroup, $row);  
 }
 
-*/
-$row = $res->fetchArray();
+echo json_encode($mygroup);
 
-/*
-$row['order_id'] = $order_id;
-$row['amount'] = $amount;
-$row['response_code'] = $response_code;
-$row['response_desc'] = $response_desc;
-*/
-
-echo json_encode($row);
 
 
 ?>
