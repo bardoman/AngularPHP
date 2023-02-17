@@ -13,3 +13,7 @@ $db->exec("INSERT INTO cars(name, price) VALUES('Citroen', 21000)");
 $db->exec("INSERT INTO cars(name, price) VALUES('Hummer', 41400)");
 $db->exec("INSERT INTO cars(name, price) VALUES('Volkswagen', 21600)");
 ?>
+//for rest.db on sdf
+//INSERT INTO contacts(contact_id,first_name,last_name, email,phone) VALUES(0, 'bruce','eifler','xxx','yyy');
+
+

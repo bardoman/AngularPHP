@@ -4,9 +4,10 @@
 $name = $_GET['name'];
 
 print $name;
-echo '<br>';
+//echo '<br>';
 
 $db = new SQLite3('test.db');
+print_r($db);
 
 if ($name==null)
 {
