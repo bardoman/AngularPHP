@@ -1,4 +1,4 @@
-<html>
+
 
 <?php
 $name = $_GET['name'];
@@ -18,10 +18,15 @@ else
     $res = $db->query("select * from cars where name='$name'");
 }
 
+$mygroup=array();
+
 while ($row = $res->fetchArray()) {
-echo "{$row['id']} {$row['name']} {$row['price']} \n";
+   array_push($mygroup, $row);  
 }
+
+echo json_encode($mygroup);
+
 
 
 ?>
-</html>
+
