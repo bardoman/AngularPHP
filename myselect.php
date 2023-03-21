@@ -3,6 +3,30 @@
     
 
 <?php
+
+
+$method = $_SERVER['REQUEST_METHOD'];
+$request = explode("/", substr(@$_SERVER['PATH_INFO'], 1));
+
+switch ($method) {
+  case 'PUT':
+    //do_something_with_put($request);  
+    break;
+  case 'POST':
+   // do_something_with_post($request);  
+    break;
+  case 'GET':
+    handleGet();  
+    break;
+  default:
+   // handle_error($request);  
+    break;
+}
+
+
+function handleGet() {
+
+    // handle GET request
 $name = $_GET['name'];
 
 //print $name;
@@ -32,6 +56,8 @@ header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 echo json_encode($mygroup);
+}
+ 
 
 
 
