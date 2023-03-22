@@ -13,7 +13,7 @@ switch ($method) {
     //do_something_with_put($request);  
     break;
   case 'POST':
-   // do_something_with_post($request);  
+   handlePost(); 
     break;
   case 'GET':
     handleGet();  
@@ -23,6 +23,13 @@ switch ($method) {
     break;
 }
 
+function handlePost()
+{
+$postkey = $_GET['postkey'];
+
+echo $postkey;
+
+}
 
 function handleGet() {
 
